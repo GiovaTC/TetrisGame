@@ -1,5 +1,8 @@
 # TetrisGame
 
+![image](https://github.com/user-attachments/assets/a5d53e74-702b-49c1-ba3b-d9f896429113)
+
+
 # Documentación del Juego de Tetris
 
 ## Descripción del Juego
