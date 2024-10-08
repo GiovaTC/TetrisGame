@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TetrisGame
 {
@@ -29,6 +30,20 @@ namespace TetrisGame
             }
 
             Shape = newShape;
+        }
+
+        public IEnumerable<Tuple<int, int>> GetFilledCells()
+        {
+            for (int row = 0; row < Shape.GetLength(0); row++)
+            {
+                for (int col = 0; col < Shape.GetLength(1); col++)
+                {
+                    if (Shape[row, col] != 0)
+                    {
+                        yield return Tuple.Create(col, row);
+                    }
+                }
+            }
         }
     }
 }

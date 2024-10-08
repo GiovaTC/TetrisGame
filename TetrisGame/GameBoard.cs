@@ -15,6 +15,16 @@ namespace TetrisGame
             board = new int[rows, columns];
         }
 
+        // Método para verificar si una celda está ocupada
+        public int GetCell(int row, int column)
+        {
+            if (row < 0 || row >= Rows || column < 0 || column >= Columns)
+            {
+                throw new ArgumentOutOfRangeException("La posición está fuera de los límites del tablero.");
+            }
+            return board[row, column];
+        }
+
         public bool IsPositionValid(Tetromino piece, int offsetX, int offsetY)
         {
             for (int row = 0; row < piece.Shape.GetLength(0); row++)

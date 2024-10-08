@@ -7,11 +7,15 @@ namespace TetrisGame
 {
     public class GameController
     {
+        public event Action GameUpdated; // Evento para notificar cuando el juego se actualiza
+
         private GameBoard board;
         private Tetromino currentPiece;
         private System.Timers.Timer gameTimer;
         private bool isGameOver;
         private Random random;
+
+        public Tetromino CurrentPiece => currentPiece;
 
         public GameController(GameBoard board)
         {
@@ -31,7 +35,7 @@ namespace TetrisGame
         public void StartGame()
         {
             isGameOver = false;
-            gameTimer.Start(); // Comenzar el temporizador del juego
+            gameTimer.Start(); // Comienza el temporizador del juego
         }
 
         private void OnGameTick(object sender, ElapsedEventArgs e)
@@ -42,8 +46,7 @@ namespace TetrisGame
 
         public void SpawnNewPiece()
         {
-            int[,] shape = GenerateRandomShape();
-            currentPiece = new Tetromino(shape);
+            currentPiece = TetrominoFactory.CreateRandomTetromino();
             currentPiece.X = board.Columns / 2 - currentPiece.Shape.GetLength(1) / 2;
             currentPiece.Y = 0;
 
@@ -53,21 +56,8 @@ namespace TetrisGame
                 gameTimer.Stop();
                 MessageBox.Show("Game Over!");
             }
-        }
 
-        private int[,] GenerateRandomShape()
-        {
-            List<int[,]> tetrominoShapes = new List<int[,]>
-            {
-                new int[,] { { 1, 1, 1, 1 } },               // Línea
-                new int[,] { { 1, 1, 1 }, { 0, 1, 0 } },    // T
-                new int[,] { { 1, 1, 0 }, { 0, 1, 1 } },    // S
-                new int[,] { { 0, 1, 1 }, { 1, 1, 0 } },    // Z
-                new int[,] { { 1, 1 }, { 1, 1 } }           // Cuadrado
-            };
-
-            int shapeIndex = random.Next(tetrominoShapes.Count);
-            return tetrominoShapes[shapeIndex];
+            GameUpdated?.Invoke(); // Notifica que el juego se ha actualizado
         }
 
         public void MovePieceLeft()
@@ -75,6 +65,7 @@ namespace TetrisGame
             if (board.IsPositionValid(currentPiece, -1, 0))
             {
                 currentPiece.X -= 1;
+                GameUpdated?.Invoke();
             }
         }
 
@@ -83,6 +74,7 @@ namespace TetrisGame
             if (board.IsPositionValid(currentPiece, 1, 0))
             {
                 currentPiece.X += 1;
+                GameUpdated?.Invoke();
             }
         }
 
@@ -95,6 +87,7 @@ namespace TetrisGame
                 currentPiece.Rotate();
                 currentPiece.Rotate();
             }
+            GameUpdated?.Invoke();
         }
 
         public void MovePieceDown()
@@ -102,6 +95,7 @@ namespace TetrisGame
             if (board.IsPositionValid(currentPiece, 0, 1))
             {
                 currentPiece.Y += 1;
+                GameUpdated?.Invoke();
             }
             else
             {
