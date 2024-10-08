@@ -48,22 +48,28 @@
             // 
             // startButton
             // 
+            startButton.BackColor = SystemColors.Highlight;
+            startButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            startButton.ForeColor = SystemColors.ButtonHighlight;
             startButton.Location = new Point(929, 51);
             startButton.Name = "startButton";
-            startButton.Size = new Size(75, 23);
+            startButton.Size = new Size(121, 40);
             startButton.TabIndex = 1;
             startButton.Text = "Start";
-            startButton.UseVisualStyleBackColor = true;
+            startButton.UseVisualStyleBackColor = false;
             startButton.Click += StartButton_Click;
             // 
             // resetButton
             // 
-            resetButton.Location = new Point(929, 97);
+            resetButton.BackColor = SystemColors.Highlight;
+            resetButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            resetButton.ForeColor = SystemColors.ButtonHighlight;
+            resetButton.Location = new Point(929, 111);
             resetButton.Name = "resetButton";
-            resetButton.Size = new Size(75, 23);
+            resetButton.Size = new Size(121, 41);
             resetButton.TabIndex = 2;
             resetButton.Text = "Reset";
-            resetButton.UseVisualStyleBackColor = true;
+            resetButton.UseVisualStyleBackColor = false;
             resetButton.Click += ResetButton_Click;
             // 
             // scoreLabel
@@ -77,42 +83,50 @@
             // 
             // leftButton
             // 
+            leftButton.BackColor = SystemColors.Highlight;
+            leftButton.ForeColor = SystemColors.ControlLightLight;
             leftButton.Location = new Point(929, 169);
             leftButton.Name = "leftButton";
-            leftButton.Size = new Size(75, 23);
+            leftButton.Size = new Size(121, 41);
             leftButton.TabIndex = 4;
             leftButton.Text = "Left";
-            leftButton.UseVisualStyleBackColor = true;
+            leftButton.UseVisualStyleBackColor = false;
             leftButton.Click += LeftButton_Click;
             // 
             // rightButton
             // 
-            rightButton.Location = new Point(929, 216);
+            rightButton.BackColor = SystemColors.MenuHighlight;
+            rightButton.ForeColor = SystemColors.ButtonHighlight;
+            rightButton.Location = new Point(929, 227);
             rightButton.Name = "rightButton";
-            rightButton.Size = new Size(75, 23);
+            rightButton.Size = new Size(121, 43);
             rightButton.TabIndex = 5;
             rightButton.Text = "Right";
-            rightButton.UseVisualStyleBackColor = true;
+            rightButton.UseVisualStyleBackColor = false;
             rightButton.Click += RightButton_Click;
             // 
             // rotateButton
             // 
-            rotateButton.Location = new Point(929, 262);
+            rotateButton.BackColor = SystemColors.Highlight;
+            rotateButton.ForeColor = SystemColors.ButtonHighlight;
+            rotateButton.Location = new Point(929, 292);
             rotateButton.Name = "rotateButton";
-            rotateButton.Size = new Size(75, 23);
+            rotateButton.Size = new Size(121, 38);
             rotateButton.TabIndex = 6;
             rotateButton.Text = "Rotate";
-            rotateButton.UseVisualStyleBackColor = true;
+            rotateButton.UseVisualStyleBackColor = false;
             rotateButton.Click += RotateButton_Click;
             // 
             // downButton
             // 
-            downButton.Location = new Point(929, 311);
+            downButton.BackColor = SystemColors.Highlight;
+            downButton.ForeColor = SystemColors.ButtonHighlight;
+            downButton.Location = new Point(929, 357);
             downButton.Name = "downButton";
-            downButton.Size = new Size(75, 23);
+            downButton.Size = new Size(121, 41);
             downButton.TabIndex = 7;
             downButton.Text = "Down";
-            downButton.UseVisualStyleBackColor = true;
+            downButton.UseVisualStyleBackColor = false;
             downButton.Click += DownButton_Click;
             // 
             // Form1
