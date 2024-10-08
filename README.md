@@ -1,6 +1,7 @@
 # TetrisGame
 
-![image](https://github.com/user-attachments/assets/c7c38e0f-ef7a-4d39-bcda-bb32e5921877)
+![image](https://github.com/user-attachments/assets/8a44b307-053d-4e64-b058-48a153c1c594)
+
 
 
 
