@@ -48,10 +48,10 @@
             // 
             // startButton
             // 
-            startButton.BackColor = SystemColors.Highlight;
+            startButton.BackColor = Color.FromArgb(0, 192, 0);
             startButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             startButton.ForeColor = SystemColors.ButtonHighlight;
-            startButton.Location = new Point(929, 51);
+            startButton.Location = new Point(885, 340);
             startButton.Name = "startButton";
             startButton.Size = new Size(121, 40);
             startButton.TabIndex = 1;
@@ -61,10 +61,10 @@
             // 
             // resetButton
             // 
-            resetButton.BackColor = SystemColors.Highlight;
+            resetButton.BackColor = Color.FromArgb(0, 192, 0);
             resetButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             resetButton.ForeColor = SystemColors.ButtonHighlight;
-            resetButton.Location = new Point(929, 111);
+            resetButton.Location = new Point(885, 386);
             resetButton.Name = "resetButton";
             resetButton.Size = new Size(121, 41);
             resetButton.TabIndex = 2;
@@ -75,17 +75,19 @@
             // scoreLabel
             // 
             scoreLabel.AutoSize = true;
-            scoreLabel.Location = new Point(929, 137);
+            scoreLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            scoreLabel.Location = new Point(1024, 406);
             scoreLabel.Name = "scoreLabel";
-            scoreLabel.Size = new Size(48, 15);
+            scoreLabel.Size = new Size(69, 21);
             scoreLabel.TabIndex = 3;
             scoreLabel.Text = "Score: 0";
+            scoreLabel.Click += scoreLabel_Click;
             // 
             // leftButton
             // 
-            leftButton.BackColor = SystemColors.Highlight;
+            leftButton.BackColor = SystemColors.ControlDarkDark;
             leftButton.ForeColor = SystemColors.ControlLightLight;
-            leftButton.Location = new Point(929, 169);
+            leftButton.Location = new Point(928, 193);
             leftButton.Name = "leftButton";
             leftButton.Size = new Size(121, 41);
             leftButton.TabIndex = 4;
@@ -95,9 +97,9 @@
             // 
             // rightButton
             // 
-            rightButton.BackColor = SystemColors.MenuHighlight;
+            rightButton.BackColor = SystemColors.ControlDarkDark;
             rightButton.ForeColor = SystemColors.ButtonHighlight;
-            rightButton.Location = new Point(929, 227);
+            rightButton.Location = new Point(1196, 193);
             rightButton.Name = "rightButton";
             rightButton.Size = new Size(121, 43);
             rightButton.TabIndex = 5;
@@ -109,7 +111,7 @@
             // 
             rotateButton.BackColor = SystemColors.Highlight;
             rotateButton.ForeColor = SystemColors.ButtonHighlight;
-            rotateButton.Location = new Point(929, 292);
+            rotateButton.Location = new Point(1069, 97);
             rotateButton.Name = "rotateButton";
             rotateButton.Size = new Size(121, 38);
             rotateButton.TabIndex = 6;
@@ -121,7 +123,7 @@
             // 
             downButton.BackColor = SystemColors.Highlight;
             downButton.ForeColor = SystemColors.ButtonHighlight;
-            downButton.Location = new Point(929, 357);
+            downButton.Location = new Point(1069, 292);
             downButton.Name = "downButton";
             downButton.Size = new Size(121, 41);
             downButton.TabIndex = 7;

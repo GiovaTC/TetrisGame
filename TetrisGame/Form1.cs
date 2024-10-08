@@ -108,5 +108,10 @@ namespace TetrisGame
         {
             // Cualquier lógica adicional de inicialización si es necesaria
         }
+
+        private void scoreLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
